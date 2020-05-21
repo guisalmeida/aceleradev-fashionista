@@ -1,0 +1,33 @@
+@import "./config.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+body,
+body button,
+body input,
+html,
+html button,
+html input {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #212529;
+}
+
+.container {
+    width: 100%;
+    max-width: $break-large;
+    margin: 0 auto;
+    padding: 1.6rem;
+}

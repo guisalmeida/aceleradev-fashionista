@@ -1,0 +1,27 @@
+.topbar {
+    width: 100%;
+    height: 55px;
+    background: #fff;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.02);
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 1.6rem;
+    }
+}
+
+.topbar__icons {
+    button {
+        border: none;
+        background: transparent;
+        padding: 0;
+    }
+
+    .topbar__search {
+        margin-right: 1.5rem;
+    }
+}
