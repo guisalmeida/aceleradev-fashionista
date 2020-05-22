@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Quantity.scss';
 
-const Quantity = () => {
+const Quantity = ({ length }) => {
     return (
-        <p className="quantity">10 itens</p>
+        <p className="quantity">{`${length} ite${length > 1 ? 'ns' : 'm'}`}</p>
     )
 }
 

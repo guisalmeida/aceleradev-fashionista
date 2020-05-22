@@ -1,4 +1,7 @@
-@import "./config.scss";
+@import 'config/breakpoints';
+@import 'config/colors';
+@import 'config/normalize';
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
 *,
@@ -18,16 +21,23 @@ html input {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Noto Sans SC', sans-serif;
     font-size: 10px;
+    font-weight: 400;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #212529;
+    background-color: $light-grey;
+    color: $dark;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
 
 .container {
     width: 100%;
     max-width: $break-large;
-    margin: 0 auto;
+    margin: 55px auto 0;
     padding: 1.6rem;
 }

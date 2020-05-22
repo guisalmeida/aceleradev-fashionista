@@ -1,8 +1,12 @@
-@import '../../styles/Global.scss';
+@import '../../styles/global.scss';
 
 .catalog {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(2, minmax(140px, auto));
+    grid-gap: 5px;
+
+    @media (min-width: $break-medium) {
+        grid-template-columns: repeat(4, minmax(300px, auto));
+    }
 }
