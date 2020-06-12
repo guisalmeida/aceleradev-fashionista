@@ -7,14 +7,14 @@ import Routes from '../../routes/Routes';
 import '../../styles/global.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Topbar />
-        <Routes />
-      </Router>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <Topbar />
+                <Routes />
+            </Router>
+        </div>
+    );
 }
 
 export default App;

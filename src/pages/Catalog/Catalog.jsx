@@ -1,20 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ProductCard from '../../components/ProductCard';
 import Quantity from '../../components/Quantity/Quantity';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { setProducts } from '../../actions/actions';
 
 import './Catalog.scss';
 
 const Catalog = () => {
-    const urlApi = "https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog";
-    const [products, setProducts] = useState([]);
+    const dispatch = useDispatch();
+    const { products } = useSelector(state => state.catalog);
+    const url = "https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog"
 
     useEffect(() => {
-        fetch(urlApi)
-            .then(async res => {
-                const response = await res.json();
-                setProducts(response);
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                dispatch(setProducts(data));
+                localStorage.setItem("products", JSON.stringify(data))
             })
-    }, []);
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <div className="container">

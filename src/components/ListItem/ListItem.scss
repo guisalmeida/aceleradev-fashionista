@@ -1,49 +1,61 @@
 @import '../../styles/global.scss';
 
-.search__item {
-    padding: 1.6rem 0;
-    border-bottom: 1px solid $grey;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
+.list__item {
+	padding: 1.6rem;
+	border-bottom: 1px solid $grey;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
 
-    .search__image {
-        margin: 0;
-        flex: 1;
+	.list__image {
+		margin: 0;
+		flex: 1;
 
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 
-    .search__title {
-        margin: 0 1rem;
-        flex: 2;
-        font-size: 1.2rem;
-        font-weight: 700;
-    }
+	.list__info {
+		width: 50%;
+		padding-left: 1rem;
+		padding-right: 1rem;
 
-    .search__prices {
-        flex: 1;
-        text-align: right;
+		.list__title {
+			margin: 0;
+			flex: 2;
+			font-size: 1.2rem;
+			font-weight: 700;
+		}
 
-        .search__price {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0 0 .5rem;
-            
-            &--old {
-                color: $grey;
-                text-decoration: line-through;
-            }
-            
-            &--installments {
-                color: $grey;
-                font-size: 1.2rem;
-                font-weight: 400;
-            }
-        }
-    }
+		.list__size {
+			font-size: 1.2rem;
+			color: #a7a7a7;
+		}
+	}
+
+	.list__prices {
+		flex: 1;
+		text-align: right;
+
+		.list__price {
+			font-size: 1.4rem;
+			font-weight: 700;
+			margin: 0 0 0.5rem;
+
+			&--old {
+				color: $grey;
+				text-decoration: line-through;
+			}
+
+			&--installments {
+				color: $grey;
+				font-size: 1.2rem;
+				font-weight: 400;
+			}
+		}
+	}
+
 }

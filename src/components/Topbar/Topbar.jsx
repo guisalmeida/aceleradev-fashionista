@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Search from '../../containers/Search';
 import Cart from '../../containers/Cart';
@@ -13,6 +14,8 @@ import './Topbar.scss';
 const Topbar = () => {
     const [searchShow, setSearchShow] = useState(false);
     const [cartShow, setCartShow] = useState(false);
+
+    const counter = useSelector(state => state.cart.cart.length);
 
     return (
         <React.Fragment>
@@ -39,6 +42,7 @@ const Topbar = () => {
                         className="topbar__cart"
                         onClick={() => setCartShow(!cartShow)}
                         >
+                            <sup className="topbar__counter">{counter}</sup>
                             <CartIcon />
                         </button>
                     </div>

@@ -25,13 +25,6 @@ const search = ({ show }) => {
                     {/* <p className="search__empty">Nenhum item encontrado :\</p> */}
 
                     <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
 
 
                 </div>

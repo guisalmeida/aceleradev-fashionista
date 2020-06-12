@@ -57,6 +57,10 @@
             color: $grey;
             font-size: 1.4rem;
             margin: 1rem 0;
+
+            &--warning {
+                color: $red;
+            }
         }
 
         .product__btn-group {

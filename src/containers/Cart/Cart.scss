@@ -1,0 +1,13 @@
+.cart__empty {
+    position: absolute;
+    top: 50%;
+    margin: 0 auto;
+    color: #a7a7a7;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+    left: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
