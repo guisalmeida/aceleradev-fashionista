@@ -28,11 +28,13 @@
 			flex: 2;
 			font-size: 1.2rem;
 			font-weight: 700;
+			margin: 0 0 .5rem;
 		}
 
 		.list__size {
 			font-size: 1.2rem;
 			color: #a7a7a7;
+			margin: 0 0 .5rem;
 		}
 	}
 
@@ -56,6 +58,15 @@
 				font-weight: 400;
 			}
 		}
+	}
+
+	.list__remove {
+		background: $red;
+		color: $white;
+		padding: .1rem .5rem;
+		border-radius: 5px;
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 
 }

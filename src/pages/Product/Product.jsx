@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { selectedProduct, addToCartAction } from '../../actions/actions';
+import { selectedProduct, addToCartAction, updateCartAction } from '../../actions/actions';
 
 import './Product.scss';
 
@@ -12,10 +12,11 @@ const Product = () => {
 
     const productId = window.location.pathname.split("/")[2];
     const product = useSelector(state => state.catalog.products.find(product => product.code_color === productId));
-
+    const { cart: cartProducts } = useSelector(state => state.cart);
+    
     const handleSize = (sku) => {
         Object.assign(product, {
-            selectedSize: sku
+            selectedSize: sku,
         });
         dispatch(selectedProduct(product));
         setSize(sku)
@@ -23,16 +24,20 @@ const Product = () => {
     };
 
     const addToCart = () => {
-        if (size === null) {
-            return setSizeError(true)
+        if (size === null) return setSizeError(true)
+
+        if (cartProducts.includes(product)) {
+            product.quantity = product.quantity + 1;
+            dispatch(updateCartAction(cartProducts));
         } else {
+            Object.assign(product, {
+                quantity: 1,
+            });
             dispatch(addToCartAction(product))
         }
     };
 
-    useEffect(() => {
-
-    }, [size, sizeError]);
+    useEffect(() => { }, [size, sizeError]);
 
     return (
         <div className="product container">

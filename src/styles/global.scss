@@ -27,6 +27,12 @@ html input {
 body {
     background-color: $light-grey;
     color: $dark;
+    font-family: Noto Sans SC,sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    min-height: 100%;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 
 button {
