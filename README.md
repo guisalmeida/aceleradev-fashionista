@@ -1,68 +1,162 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto: Fashionista E-commerce
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"/>
+</a>
 
-## Available Scripts
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e94159a9-8416-4740-902b-eac7257beca1/deploy-status)](https://app.netlify.com/sites/fashionista-shop/deploys)
+<br>
+## [Demo do projeto](https://fashionista-shop.netlify.app/)
 
-In the project directory, you can run:
+## Principais linguagens, tecnologias e ferramentas utilizadas
 
-### `yarn start`
+-   HTML
+-   CSS (utilização de BEM CSS para construção de estilos)
+-   Javascript
+-   Node
+-   React (principal biblioteca para construção do site - inclusive uso de Hooks)
+-   Redux (para gerenciamento de estados)
+-   React Router (para aplicar múltiplas rotas)
+-   React Debounce Input (para aplicar efeito debounce no input da busca em tempo real)
+-   Responsividade e adaptação de aplicação web para front
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Cenário
 
-### `yarn test`
+Segundo o levantamento, da Webshoppers (Ebit / Nielsen), os e-commerces brasileiros faturaram cerca de R\$ 53,2 bilhões em 2018. O segmento “Moda e Acessórios” representa 5,6% do faturamento no varejo online, ocupando a segunda posição entre as categorias de produtos com mais pedidos, perdendo apenas para o segmento de eletroeletrônicos.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Oferecer a melhor experiência aos usuários que interagem com os produtos no desktop, e principalmente em dispositivos móveis, é fundamental para se manter vivo e competitivo nesse segmento.
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Objetivo
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Como um profissional front-end, você será responsável por desenvolver as principais funcionalidades de um e-commerce de moda feminina, o Fashionista, garantindo a melhor experiência possível para os usuários interagirem com os produtos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `yarn eject`
+## Regras
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   [x] Deve implementar as funcionalidades apresentadas nos wireframes / layouts.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   [x] Deve ser mobile first, possuindo uma experiência satisfatória tanto em mobile quanto em desktop.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   [x] Deve consumir a API do catálogo de produtos.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   [x] O estado global da aplicação deverá ser gerenciado com Redux
 
-## Learn More
+-   [x] Deve ser um SPA (Single Page Application).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   [x] Todos os produtos da API devem ser exibidos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   [x] Utilize BEM CSS para escrever os estilos.
 
-### Code Splitting
+-   [x] Deve-se fazer deploy do projeto, servindo-o no Netlify.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+-   [x] Não utilize frameworks CSS como Bootstrap, Foundation e afins.
 
-### Analyzing the Bundle Size
+### Requisitos obrigatórios
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+-   Para cada item do catálogo de produtos as seguintes informações devem estar na página:
 
-### Making a Progressive Web App
+    -   [x] Imagem
+    -   [x] Nome
+    -   [x] Preço
+    -   [x] Status “Em promoção”
+    -   [x] Preço promocional (se disponível)
+    -   [x] Tamanhos disponíveis
+    -   [x] Selo “Promoção”
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+-   [x] Deve ser possível adicionar itens por tamanho no carrinho de compras.
 
-### Advanced Configuration
+-   [x] Deve ser possível visualizar os itens adicionados no carrinho de compras, exibindo imagem, nome, preço e quantidade.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+-   [x] Deve ser possível remover itens do carrinho de compras.
 
-### Deployment
+### Requisitos opcionais
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+-   [x] O carrinho de compras deve persistir entre reloads de página.
 
-### `yarn build` fails to minify
+-   [x] Alguns produtos não tem todos os tamanhos disponíveis, mostre apenas os tamanhos disponíveis em estoque.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-   [x] Implemente a funcionalidade de busca em tempo real.
+
+<br>
+
+## Layouts
+
+Os layouts abaixo servem de referência visual das funcionalidades, sintam-se livres para segui-las ou implementá-las com base em outras referências, desde que atenda às regras e aos requisitos obrigatórios.
+<br><br>
+
+### Layouts: Home (catálogo)
+
+<img width='580' src='https://user-images.githubusercontent.com/45580434/79029201-c67bb500-7b69-11ea-9396-a85edae52eaa.png'>
+
+<br>
+
+### Layouts: Página do produto
+
+<img  width='580' src='https://user-images.githubusercontent.com/45580434/79029203-caa7d280-7b69-11ea-8f1d-a0586ab9c56f.png'>
+
+<br>
+
+### Layouts: Indicador de produtos no ícone do carrinho
+
+<img  width='580' src='https://user-images.githubusercontent.com/45580434/79029206-cda2c300-7b69-11ea-914b-60f4b790ebf4.png'>
+
+<br>
+
+### Layouts: Carrinho de compras aberto
+
+<img width='580' src='https://user-images.githubusercontent.com/45580434/79029208-cf6c8680-7b69-11ea-8073-4b1105df9c9f.png'>
+
+<br>
+
+### Layouts: Busca em tempo real
+
+<img  width='580' src='https://user-images.githubusercontent.com/45580434/79029211-d1cee080-7b69-11ea-91a8-684f78c21bef.png'>
+
+<br>
+<br>
+
+## Como rodar a aplicação
+
+No terminal, clone o projeto:
+
+```
+git clone git@github.com:GuiSAlmeida/aceleradev-fashionista.git
+```
+
+Entre na pasta do projeto:
+
+```
+cd aceleradev-fashionista
+```
+
+Instale as dependências:
+
+```
+npm install
+```
+
+Execute a aplicação:
+
+```
+npm start
+```
+
+<br>
+
+## Autor
+
+**Guilherme Almeida**: _Desenvolvedor web front-end_
+-   [Site](guisalmeida.com)
+-   [Linkedin](https://www.linkedin.com/in/guisalmeida/)
+-   [Github](https://github.com/guisalmeida)
+-   [Email](guisalmeida.dev@gmail.com)
+
+<br>
+
+## Licença
+
+The [MIT License]() (MIT)
