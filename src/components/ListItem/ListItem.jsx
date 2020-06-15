@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { updateCartAction } from '../../actions/actions'
+import { updateCartAction } from '../../actions/cart'
 
 import './ListItem.scss';
 import ListQuantity from '../ListQuantity';
@@ -29,24 +29,28 @@ const ListItem = ({
     return (
         <div className="list__item">
             <figure className="list__image">
-                <img src={image} alt={name} />
+                <img src={image || "https://via.placeholder.com/470x594/FFFFFF/?text=Imagem+Indispon%C3%ADvel"} alt={name} />
             </figure>
             <div className="list__info">
                 <h3 className="list__title">{name}</h3>
-                <p className="list__size"><span>{`Tam.: ${size}`}</span></p>
+                {size && <p className="list__size"><span>{`Tam.: ${size}`}</span></p>}
 
-                <ListQuantity
-                    quantity={quantity}
-                    index={index}
-                />
+                {quantity &&
+                    <ListQuantity
+                        quantity={quantity}
+                        index={index}
+                    />
+                }
 
-                <button
-                    type="button"
-                    className="list__remove"
-                    onClick={() => handleDelete(index)}
-                >
-                    Remover
-                </button>
+                {quantity &&
+                    <button
+                        type="button"
+                        className="list__remove"
+                        onClick={() => handleDelete(index)}
+                    >
+                        Remover
+                    </button>
+                }
             </div>
 
             <div className="list__prices">

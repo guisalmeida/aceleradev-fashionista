@@ -3,7 +3,7 @@ import ProductCard from '../../components/ProductCard';
 import Quantity from '../../components/Quantity/Quantity';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setProducts } from '../../actions/actions';
+import { setProducts } from '../../actions/products';
 
 import './Catalog.scss';
 

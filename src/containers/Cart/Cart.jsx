@@ -7,14 +7,15 @@ import Subtotal from '../../components/Subtotal';
 
 import './Cart.scss';
 
-const Cart = ({ show }) => {
+const Cart = ({ showCart, handleShow }) => {
 
     const { cart: cartProducts } = useSelector(state => state.cart);
 
     return (
         <Slider
-            show={show}
+            show={showCart}
             title={`Sacola(${cartProducts.length})`}
+            handleShow={handleShow}
         >
             {cartProducts?.length > 0
                 ? cartProducts.map((cartProduct, index) => {

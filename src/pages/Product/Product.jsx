@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { selectedProduct, addToCartAction, updateCartAction } from '../../actions/actions';
+import { selectedProduct } from '../../actions/product';
+import { addToCartAction, updateCartAction } from '../../actions/cart';
 
 import './Product.scss';
 
@@ -42,7 +43,7 @@ const Product = () => {
     return (
         <div className="product container">
             <figure className="product__image">
-                <img src={product.image} alt={product.name} title={product.name} />
+                <img src={product.image || "https://via.placeholder.com/470x594/FFFFFF/?text=Imagem+Indispon%C3%ADvel"} alt={product.name} title={product.name} />
             </figure>
 
             <div className="product__content">

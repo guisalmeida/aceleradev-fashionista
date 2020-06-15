@@ -1,9 +1,10 @@
 
 const initState = {
     cart: JSON.parse(localStorage.getItem("cart")) || [],
+    showCart: false
 };
 
-function reducer(state = initState, action) {
+function cartReducer(state = initState, action) {
     switch (action.type) {
         case "ADD_CART":
             return {
@@ -17,10 +18,16 @@ function reducer(state = initState, action) {
                 cart: action.payload
             };
 
+        case "SHOW_CART":
+            return {
+                ...state,
+                showCart: action.payload
+            };
+
         default:
             return state;
 
     }
 };
 
-export default reducer;
+export default cartReducer;

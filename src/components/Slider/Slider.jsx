@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Backdrop from '../Backdrop';
 
 import './Slider.scss';
 
 import { ReactComponent as ArrowBack } from '../../assets/arrow-left.svg';
 
-const Slider = ({ show, title, children }) => {
-    const [open, setOpen] = useState(false);
-
-    useEffect(() => {
-        setOpen(show)
-    }, [show])
+const Slider = ({ show, title, children, handleShow }) => {
 
     return (
         <React.Fragment>
-            <div className={`slider ${open && 'open'}`}>
+            <div className={`slider ${show && 'open'}`}>
                 <header className="slider__header">
                     <button
                         className="slider__back"
-                        onClick={() => setOpen(false)}
+                        onClick={() => handleShow(false)}
                     >
                         <ArrowBack />
                     </button>
@@ -26,7 +21,7 @@ const Slider = ({ show, title, children }) => {
                 </header>
                 {children}
             </div>
-            <Backdrop show={open}/>
+            <Backdrop show={show} />
         </React.Fragment>
     )
 };

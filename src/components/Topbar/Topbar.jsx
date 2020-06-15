@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Search from '../../containers/Search';
 import Cart from '../../containers/Cart';
+
+import { showSearchAction } from '../../actions/search';
+import { showCartAction } from '../../actions/cart';
 
 import { ReactComponent as Logo } from '../../assets/Fashionista-logo.svg';
 import { ReactComponent as SearchIcon } from '../../assets/search-icon.svg';
@@ -12,15 +15,31 @@ import { ReactComponent as CartIcon } from '../../assets/cart-icon.svg';
 import './Topbar.scss';
 
 const Topbar = () => {
-    const [searchShow, setSearchShow] = useState(false);
-    const [cartShow, setCartShow] = useState(false);
+    const dispatch = useDispatch();
+
+    const { showSearch } = useSelector(state => state.search);
+    const { showCart } = useSelector(state => state.cart);
 
     const counter = useSelector(state => state.cart.cart.length);
 
+    const handleShowSearch = (bool) => {
+        dispatch(showSearchAction(bool))
+    }
+
+    const handleShowCart = (bool) => {
+        dispatch(showCartAction(bool))
+    }
+
     return (
         <React.Fragment>
-            <Search show={searchShow} />
-            <Cart show={cartShow} />
+            <Search
+                showSearch={showSearch}
+                handleShow={handleShowSearch}
+            />
+            <Cart
+                showCart={showCart}
+                handleShow={handleShowCart}
+            />
 
             <header className="topbar">
                 <div className="container">
@@ -29,18 +48,18 @@ const Topbar = () => {
                     </Link>
 
                     <div className="topbar__icons">
-                        <button 
-                        type="button" 
-                        className="topbar__search"
-                        onClick={() => setSearchShow(!searchShow)}
+                        <button
+                            type="button"
+                            className="topbar__search"
+                            onClick={() => handleShowSearch(!showSearch)}
                         >
                             <SearchIcon />
                         </button>
 
-                        <button 
-                        type="button" 
-                        className="topbar__cart"
-                        onClick={() => setCartShow(!cartShow)}
+                        <button
+                            type="button"
+                            className="topbar__cart"
+                            onClick={() => handleShowCart(!showCart)}
                         >
                             <sup className="topbar__counter">{counter}</sup>
                             <CartIcon />
