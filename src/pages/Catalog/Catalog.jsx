@@ -19,7 +19,7 @@ const Catalog = () => {
                 dispatch(setProducts(data));
                 localStorage.setItem("products", JSON.stringify(data))
             })
-    }, [])
+    }, [dispatch])
 
     return (
         <div className="container">
