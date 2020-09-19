@@ -10,7 +10,7 @@ import './Catalog.scss';
 const Catalog = () => {
     const dispatch = useDispatch();
     const { products } = useSelector(state => state.catalog);
-    const url = "https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog"
+    const url = "https://github.com/GuiSAlmeida/aceleradev-fashionista/blob/master/mockedData.json";
 
     useEffect(() => {
         fetch(url)
@@ -19,7 +19,6 @@ const Catalog = () => {
                 dispatch(setProducts(data));
                 localStorage.setItem("products", JSON.stringify(data))
             })
-        // eslint-disable-next-line
     }, [])
 
     return (
