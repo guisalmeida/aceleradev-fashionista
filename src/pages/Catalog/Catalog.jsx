@@ -10,7 +10,7 @@ import './Catalog.scss';
 const Catalog = () => {
     const dispatch = useDispatch();
     const { products } = useSelector(state => state.catalog);
-    const url = "https://github.com/GuiSAlmeida/aceleradev-fashionista/blob/master/mockedData.json";
+    const url = "https://raw.githubusercontent.com/GuiSAlmeida/aceleradev-fashionista/master/mockedData.json";
 
     useEffect(() => {
         fetch(url)
