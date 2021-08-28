@@ -5,11 +5,11 @@ import catalogReducer from './catalogReducer';
 import cartReducer from './cartReducer';
 import searchReducer from './searchReducer';
 
-const rootReducer = combineReducers({
+const reducers = combineReducers({
     catalog: catalogReducer,
     product: productReducer,
     cart: cartReducer,
     search: searchReducer,
 });
 
-export default rootReducer;
+export default reducers;

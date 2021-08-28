@@ -1,9 +1,9 @@
 
-const initState = {
+const initialState = {
     products: JSON.parse(localStorage.getItem("products")) || [],
 };
 
-function reducer(state = initState, action) {
+function reducer(state = initialState, action) {
     switch (action.type) {
         case "SET_PRODUCTS":
             return {
@@ -13,7 +13,6 @@ function reducer(state = initState, action) {
 
         default:
             return state;
-
     }
 };
 

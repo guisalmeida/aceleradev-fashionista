@@ -1,10 +1,10 @@
 
-const initState = {
+const initialState = {
     search: [],
     showSearch: false
 };
 
-function searchReducer(state = initState, action) {
+function searchReducer(state = initialState, action) {
     switch (action.type) {
         case "UPDATE_SEARCH":
             return {

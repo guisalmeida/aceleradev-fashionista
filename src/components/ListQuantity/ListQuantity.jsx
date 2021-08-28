@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateCartAction } from '../../actions/cart'
+import { updateCartAction } from '../../redux/actions/cartActions'
 
 import './ListQuantity.scss';
 

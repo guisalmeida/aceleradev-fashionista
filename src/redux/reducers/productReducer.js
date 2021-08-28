@@ -1,9 +1,9 @@
 
-const initState = {
+const initialState = {
     selectedProduct: JSON.parse(localStorage.getItem("selectedProduct")) || [],
 };
 
-function reducer(state = initState, action) {
+function productReducer(state = initialState, action) {
     switch (action.type) {
         case "SET_SELECTED_PRODUCT":
             return {
@@ -17,4 +17,4 @@ function reducer(state = initState, action) {
     }
 };
 
-export default reducer;
+export default productReducer;

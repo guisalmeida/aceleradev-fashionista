@@ -1,10 +1,10 @@
 
-const initState = {
+const initialState = {
     cart: JSON.parse(localStorage.getItem("cart")) || [],
     showCart: false
 };
 
-function cartReducer(state = initState, action) {
+function cartReducer(state = initialState, action) {
     switch (action.type) {
         case "ADD_CART":
             return {

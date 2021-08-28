@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import Search from '../../containers/Search';
 import Cart from '../../containers/Cart';
 
-import { showSearchAction } from '../../actions/search';
-import { showCartAction } from '../../actions/cart';
+import { showSearchAction } from '../../redux/actions/searchActions';
+import { showCartAction } from '../../redux/actions/cartActions';
 
 import { ReactComponent as Logo } from '../../assets/Fashionista-logo.svg';
 import { ReactComponent as SearchIcon } from '../../assets/search-icon.svg';

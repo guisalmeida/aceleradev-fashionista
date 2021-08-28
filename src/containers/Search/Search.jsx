@@ -7,7 +7,7 @@ import Slider from '../../components/Slider';
 import Quantity from '../../components/Quantity';
 import ListItem from '../../components/ListItem';
 
-import { updateSearchAction } from '../../actions/search';
+import { updateSearchAction } from '../../redux/actions/searchActions';
 
 import './Search.scss';
 
