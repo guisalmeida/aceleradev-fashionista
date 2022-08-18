@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Search from '../../containers/Search';
@@ -67,6 +67,8 @@ const Topbar = () => {
                     </div>
                 </div>
             </header>
+
+            <Outlet/>
         </React.Fragment>
     )
 }
